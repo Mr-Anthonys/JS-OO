@@ -27,15 +27,34 @@ Ao final deve se exibir uma mensagem:
 "O heroi de nome **{nome}** está no nível **{nivel}**"
 
 */
-
-
-function classificaHeroi(heroi) {
-    switch (heroi) {
-        case 1:
-            nivel = 10.000;
-            console.log(nivel)
-    }
+console.log('Os XPs vao de 1.000 a 20.000, sendo: ');
+for (let i = 1000; i < 20000; i = i + 1000) {
+    console.log(`level ${i}`)
 }
+
+let heroi = 'SuperPatria';
+
+function classificaHeroi(XP) {
+    if (XP <= 1000) {
+        patente = 'Bronze'
+    } else if (XP >= 1001 && XP <= 2000) {
+        patente = 'Prata Ouro'
+    } else if (XP >= 2001 && XP <= 8000) {
+        patente = 'Platina Diamante'
+    } else if (XP >= 8001 && XP <= 9000) {
+        patente = 'Ascendente'
+    } else if (XP >= 9001 && XP <= 10000) {
+        patente = 'Imortal'
+    } else {
+        patente = 'Radiante'
+    }
+
+    return patente;
+};
+
+console.log(`O heroi de nome ${heroi} esta no nivel ${classificaHeroi(19000)}`);
+
+
 
 
 

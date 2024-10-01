@@ -1,5 +1,5 @@
 function calcularSoma(a, b = 2) {
-    soma = Math.random() * (a + b);
+    soma = Math.random() * (a + b); 
     return soma;
 }
 

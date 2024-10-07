@@ -1,10 +1,7 @@
-const soma = (a, b) =>;
+const soma = (a, b) => (a + b)
 
 function executar(funcao) {
-    multi = (min = a, max = b) => {
-        return Math.random(min - max) + min
-    }
-    return funcao(multi());
+    soma()
 }
 
-executar (soma(2, 3));
+console.log(executar(soma(2, 2)));

@@ -1,4 +1,4 @@
-let word = "BOHR"
+let word = "Sargento"
 let number = word.length
 
 

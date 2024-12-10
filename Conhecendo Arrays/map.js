@@ -9,3 +9,11 @@ console.log(soma);
 
 const notasAtualizadas = notas.map((nota) => nota + 1);
 console.log(notasAtualizadas)
+
+//PADRONIZANDO STRINGS
+const nomes = ['Andreas', 'Bruno', 'MaTeus', 'LeticiA']
+
+const nomesPadronizados = nomes.map((nome) => nome.toUpperCase());
+
+console.log(nomesPadronizados)
+

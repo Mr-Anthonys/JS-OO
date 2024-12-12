@@ -91,3 +91,24 @@ function findName(nome) {
 };
 findName('Carlos Oliveira');
 
+
+
+
+/*
+5 - Considere um array de números inteiros.
+
+Utilize o método forEach() para multiplicar cada elemento do array por 3 e exibir no console o resultado de cada multiplicação. Depois, utilize o método findIndex() para encontrar o índice do número 18 no array original.
+*/
+const numeros = [6, 9, 12, 15, 18, 21];
+
+numeros.forEach(numero => {
+    let resultado = numero *3;
+    console.log(resultado);
+});
+
+const indicee18 = numeros.findIndex(numero => numero === 18);
+if (indicee18) {
+    console.log(`Indice número 18: ${indicee18}`);
+} else {
+    console.log(`Numero não encontrado`);
+}

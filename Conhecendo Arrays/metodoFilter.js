@@ -8,3 +8,14 @@ const isPair =  function(x) {
 
 const arrayPair = meuArray.filter(isPair); //So ira para a variavel arrayPair se for true em isPair
 console.log(arrayPair)   //[2, 4]
+
+
+
+//OUTRO EXEMPLO:
+const alunos = ['Carlos' , 'Marcos', 'Gabriel'];
+const medias = [5, 8, 6];
+
+const result = alunos.filter((aluno, indice) => {
+    return medias[indice] < 7;
+})
+console.log(result)

@@ -48,14 +48,47 @@ console.log(lista)
 const arrayNum = [1, 2, 3, 4];
 
 function getArray(array, num) {
-    array.toString()
-    if (array.include(num)) {
-        indice = array.indexOf();
+    if (array.includes(num)) {
+        indice = array.indexOf(num);
         item = array[indice];
-        console.log(`${indice} - ${item}`);
+        console.log(`indice: ${indice} - valor: ${item}`);
     } else {
         console.log(`-1`)
     }
 }
 
-getArray(arrayNum, 6)
+getArray(arrayNum, 4)
+
+
+
+
+/*
+4 - Você recebeu dois arrays de nomes contendo os alunos da Turma A e da Turma B.
+Utilize o método concat() para unir os arrays das turmas A e B em um único array chamado todasAsTurmas. Depois, utilize o método find() para buscar um aluno específico pelo nome no array todosAlunos. Exiba no console uma mensagem informando o nome do aluno procurado; caso não exista na lista, retorne uma mensagem de aviso, por exemplo Aluno não encontrado.
+*/
+
+const nomesTurmaA = [
+    'João Silva',
+    'Maria Santos',
+    'Pedro Almeida'
+];
+
+const nomesTurmaB = [
+    'Carlos Oliveira',
+    'Ana Souza',
+    'Lucas Fernandes'
+];
+
+const todasAsTurmas = nomesTurmaA.concat(nomesTurmaB);
+
+function findName(nome) {
+    if (todasAsTurmas.includes(nome)) {
+        const nomeEncontrado = todasAsTurmas.find(nome);
+        console.log(nomeEncontrado);
+    } else {
+        console.log('Aluno nao encontrado.')
+    }
+}
+
+findName('Carlos Oliveira')
+

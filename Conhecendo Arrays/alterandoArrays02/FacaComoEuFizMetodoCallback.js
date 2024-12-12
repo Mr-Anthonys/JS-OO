@@ -82,13 +82,12 @@ const nomesTurmaB = [
 const todasAsTurmas = nomesTurmaA.concat(nomesTurmaB);
 
 function findName(nome) {
-    if (todasAsTurmas.includes(nome)) {
-        const nomeEncontrado = todasAsTurmas.find(nome);
+    const nomeEncontrado = todasAsTurmas.find(nomeProcura => nomeProcura === nome);
+    if (nomeEncontrado) {
         console.log(nomeEncontrado);
     } else {
-        console.log('Aluno nao encontrado.')
+        console.log('Aluno nao encontrado.');
     }
-}
-
-findName('Carlos Oliveira')
+};
+findName('Carlos Oliveira');
 

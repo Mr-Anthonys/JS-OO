@@ -14,6 +14,11 @@ const arrayNotas = [2, 5, 6.5, 10];
 let media = 0
 let soma = 0
 
-function getMedia(arrayNotass) {
-    soma += arrayNotass
+function getMedia(arrayNotas) {
+    soma += arrayNotas
+    return soma
 }
+arrayNotas.forEach(getMedia)
+console.log(soma);
+
+

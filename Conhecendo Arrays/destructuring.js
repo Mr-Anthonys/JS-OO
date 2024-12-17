@@ -5,6 +5,9 @@ const pessoa = {
     idade: 21
 };
 
+const {nome} = pessoa;
+console.log(nome)
+
 const loja = {
     nome: 'Perfum',
     data: new Date()
@@ -24,3 +27,17 @@ let valorB = ++i;
 
 console.log("O valor de valorA é:", valorA);
 console.log("O valor de valorB é:", valorB);
+
+
+
+//Arrays
+const pessoa1 = ['Uva', 'maça'];
+
+const [Fruta1, Fruta2] = pessoa1
+console.log([Fruta1, Fruta2])
+const Uva = [Fruta1]
+const maca = [Fruta2];
+
+console.log(Uva);
+console.log(maca);
+

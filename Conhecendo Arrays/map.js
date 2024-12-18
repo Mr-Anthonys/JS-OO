@@ -15,5 +15,5 @@ const nomes = ['Andreas', 'Bruno', 'MaTeus', 'LeticiA']
 
 const nomesPadronizados = nomes.map((nome) => nome.toUpperCase());
 
-console.log(nomesPadronizados)
+console.log(nomesPadronizados);
 

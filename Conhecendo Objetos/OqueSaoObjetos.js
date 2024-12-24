@@ -36,3 +36,21 @@ chaves.forEach((chave) => {
     console.log(`A chave ${chave} tem valor ${cliente[chave]}`);
 });
 
+
+//////
+const pessoa1 = {
+    nome: 'Andreas',
+    idade: 15,
+    jogo: 'r6',
+    telefone: ['551199393939393', '5511929292929'],
+}
+
+
+pessoa1.endereco = {
+    rua: 'Manuel Martins Ferreira',
+    apto: 92,
+    cep: '022040'
+}
+
+console.log(pessoa1.endereco.cep);
+

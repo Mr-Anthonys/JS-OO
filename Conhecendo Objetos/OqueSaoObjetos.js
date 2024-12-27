@@ -38,19 +38,43 @@ chaves.forEach((chave) => {
 
 
 //////
+
+// pessoa1.endereco = {
+//     rua: 'Manuel Martins Ferreira',
+//     apto: 92,
+//     cep: '022040'
+// }
+
+//console.log(`Aqui está o CEP: ${pessoa1.endereco.cep}`);
+
+
+
+console.log('INICIO DA VERIFICAÇÃO ESTUDANTE')
+
 const pessoa1 = {
     nome: 'Andreas',
     idade: 15,
     jogo: 'r6',
     telefone: ['551199393939393', '5511929292929'],
+    media: 8.5,
+    estaAprovado: function(mediaBase) {
+        return this.media >= mediaBase ? 'Aprovado' : 'Reprovado'
+    }
 }
 
+console.log(pessoa1.estaAprovado(7))
 
-pessoa1.endereco = {
-    rua: 'Manuel Martins Ferreira',
-    apto: 92,
-    cep: '022040'
+
+
+function verificaBolsa(obj) {
+    if (obj.bolsista === true) {
+        console.log('O estudante é bolsista.');
+    } if (obj.bolsista  === false) {
+        console.log('O estudante não é bolsista.')
+    } if (!obj.hasOwnProperty('bolsista')) {
+        obj.bolsista = false
+        verificaBolsa(obj);
+    }
 }
 
-console.log(pessoa1.endereco.cep);
-
+verificaBolsa(pessoa1)

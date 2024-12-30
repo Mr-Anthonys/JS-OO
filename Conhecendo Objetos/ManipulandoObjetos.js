@@ -23,8 +23,13 @@ const nomeCachorro = cliente.animalEstimacao.filter((animal) => {
 });
 
 
+
+
+
+
+//Teste com Reduce
 const array = [1, 1, 1, 1]
 const soma = array.reduce((contador, nmr) => {
     return nmr + contador;
 }, 0)
-console.log(soma)
+console.log(soma);

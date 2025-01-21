@@ -24,17 +24,24 @@ function mostrarInfoPessoa(obj) {
     `Nome do cliente: ${obj.nome};
     idade: ${obj.idade};
     estado civil: ${obj.solteiro};
+    rua: ${obj.endereco.rua};
+    cidade: ${obj.endereco.cidade};
+    UF: ${obj.endereco.estado}
     `)
     
     //Verifica se existe hobbie
     if (obj.hasOwnProperty('hobbie')) {
         if (obj.hobbie != undefined) {
+            console.log("Hobbies: ")
             for (let att of obj.hobbie) {
-                
+                hb = att
+                console.log(hb)
             }
         }
     }
 }
+/*
+
 
 
 /*
@@ -50,8 +57,12 @@ Modifique a função mostrarInfoPessoa para incluir as informações do endereç
 No final do arquivo infoPessoa.js, chame a função mostrarInfoPessoa para verificar se as informações atualizadas, incluindo o endereço, são exibidas corretamente no console.
 */
 
-
-
+Pessoa.endereco = {
+    rua: 'Manuel Martins',
+    cidade: 'Sao Paulo',
+    estado: 'SP'
+};
+mostrarInfoPessoa(Pessoa)
 
 
 
@@ -74,9 +85,37 @@ d) Crie uma função chamada filtrarPorCidade que aceita a lista pessoas e uma s
 Chame a função filtrarPorCidade passando a lista pessoas e uma cidade fictícia como argumentos e imprima no console o resultado obtido.
 */
 
+const PessoasGeral = [
+    {
+        nome: 'Andreas',
+        idade: 21,
+        cidade: 'SP'
+    },
+    {
+        nome: 'Anthony',
+        idade: 20,
+        cidade: 'MG'
+    }
+];
 
 
+function mostrarListaPessoas(arrayPessoas) {
+    arrayPessoas.forEach(pessoa => {
+        console.log(`Nome: ${pessoa.nome}, idade: ${pessoa.idade}, Cidade: ${pessoa.cidade}`) 
+    });
+}
+//Adicionando pessoa nova
+PessoasGeral.push({nome: 'Leticia', idade: 17, cidade: 'SP'});
 
+function filtrarPorCidade(pessoas, cidade) {
+    if (pessoas.filter(pessoa => pessoa.cidade === cidade)) {
+        return pessoas.filter(pessoa => pessoa.cidade === cidade)
+    } else {
+        return "Nao existem pessoas nessa lista nesta localidade."
+    }
+}
+
+console.log(filtrarPorCidade(PessoasGeral, 'MG'))
 
 
 
@@ -95,10 +134,25 @@ b) Adicione um novo método chamado calcularMedia ao objeto calculadora. Esta fu
 c) Chame a função calcularMedia passando um array de números e imprima no console o resultado obtido.
 */
 
+const calculadora = {
+    some: function soma(a, b) { return a + b },
+    sub: function subtracao(a, b) { return a - b },
+    mult: function multi(a, b) { return a * b },
+    div: function divisao(a, b) { calculo = a / b; if (b !== 0) {return calculo} else {return "Divisao menor que zero."} },
+    calcularMedia: function media(arrayMedia) {
+        const soma = arrayMedia.reduce((total, numero) => total + numero, 0);
+        return soma / arrayMedia.length;
+    }
+}
 
+console.log("Soma: " + calculadora.some(5, 3));
+console.log("Subtração: " + calculadora.sub(8, 4));
+console.log("Multiplicação: " + calculadora.mult(6, 2));
+console.log("Divisão: " + calculadora.div(10, 2));
+console.log("Divisão por zero: " + calculadora.div(8, 0)); 
 
-
-
+const numerosParaMedia = [10, 8, 6, 9, 7];
+console.log("Média: " + calculadora.calcularMedia(numerosParaMedia));
 
 
 

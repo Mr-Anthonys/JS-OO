@@ -172,3 +172,47 @@ Crie uma função chamada mostrarSaldo que aceita o objeto cliente como parâmet
 
 Realize operações de depósito e saque na conta bancária do cliente usando as funções do objeto contaBancaria e, em seguida, chame a função para exibir as informações atualizadas no console.
 */
+const contaBancaria = {
+    titular: "Anthony",
+    saldo: 800,
+    conta: "Ag1808",
+    depositar: function depositar(valor) {
+        this.saldo += valor;
+    },
+    sacar: function sacar(valor) {
+        if (valor <= this.saldo) {
+            this.saldo -= valor;
+        } else {
+            console.log(`Saldo insuficiente de ${this.saldo}`);
+        }
+    },
+}
+
+
+const cliente = {
+    nome: "Anthony",
+    conta: contaBancaria,
+}
+
+function mostrarSaldo(cliente) {
+    console.log(`Ola, ${cliente.conta.titular}, titular da conta "${cliente.conta.conta}". Seu saldo atual e de: R$ ${cliente.conta.saldo}`
+    )
+}
+
+function Deposito(cliente, valorDeposito, valorSaque) {
+    saldoAnterior = cliente.conta.saldo;
+    cliente.conta.depositar(valorDeposito);
+    cliente.conta.sacar(valorSaque);
+    console.log(`efetuando deposito de ${valorDeposito}...
+            Efetuando Deposito...
+            Saldo antigo: ${saldoAnterior}
+            Saldo atual: ${cliente.conta.saldo}
+            Efetuando saque no valor de: ${valorSaque}...
+            Saldo Atual = ${cliente.conta.saldo}
+        `)
+}
+
+//mostrarSaldo(cliente)
+Deposito(cliente, 700, 0)
+
+console.log(contaBancaria.saldo);

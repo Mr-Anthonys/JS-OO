@@ -11,7 +11,9 @@ Chame o método calcularMediaNotas para calcular a média das notas da pessoa e 
 
 Chame o método classificarDesempenho e imprima no console a categoria de desempenho da pessoa.
 */
-
+const pessoa = {
+    
+}
 
 
 /*

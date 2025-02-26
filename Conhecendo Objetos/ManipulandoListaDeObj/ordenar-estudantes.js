@@ -1,0 +1,1 @@
+const estudantes = requires('./estudantes.json');

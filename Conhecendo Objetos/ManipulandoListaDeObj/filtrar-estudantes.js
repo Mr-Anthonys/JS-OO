@@ -1,4 +1,4 @@
-const estudantes = require('./encontra-estudantes'); 
+const estudantes = require('./estudantes.json'); 
 
 function procurarPorPropriedade(lista, propriedade) {
     return lista.filter((estudante) => {

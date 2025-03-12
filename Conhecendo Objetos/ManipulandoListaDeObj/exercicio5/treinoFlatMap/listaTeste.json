@@ -6,22 +6,24 @@
         "estado": "SP",
         "profissoes": [
             {
-                "id": 1,
-                "Prof1": "Policial",
-                "Prof2": "Bombeiro"
+                "nome": "Policial"
+            },
+            {
+                "nome": "Bombeiro"
             }
         ]
     },
     {
-        "nome": "Andreas",
+        "nome": "Anthony",
         "idade": 21,
         "pais": "Brasil",
         "estado": "SP",
         "profissoes": [
             {
-                "id": 2,
-                "Prof1": "Desenvolvedor",
-                "Prof2": "Analista de Sistemas"
+                "nome": "Desenvolvedor"
+            },
+            {
+                "nome": "Analista de Sistemas"
             }
         ]
     },
@@ -32,9 +34,10 @@
         "estado": "SP",
         "profissoes": [
             {
-                "id": 3,
-                "Prof1": "Professor",
-                "Prof2": "Geografo"
+                "nome": "Geógrafo"
+            },
+            {
+                "nome": "Professor"
             }
         ]
     }

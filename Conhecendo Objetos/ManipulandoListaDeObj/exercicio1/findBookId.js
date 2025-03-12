@@ -10,7 +10,7 @@ function encontrarLivroPorID(lista, propriedade, id) {
     });
 };
 
-const livroEncontrado = encontrarLivroPorID(biblioteca, 'id', 4);
+const livroEncontrado = encontrarLivroPorID(biblioteca, 'id', 5);
 console.log(livroEncontrado);
 
 

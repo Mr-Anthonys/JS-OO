@@ -1,0 +1,41 @@
+[
+    {
+        "nome": "Lucas",
+        "idade": 23,
+        "pais": "Brasil",
+        "estado": "SP",
+        "profissoes": [
+            {
+                "id": 1,
+                "Prof1": "Policial",
+                "Prof2": "Bombeiro"
+            }
+        ]
+    },
+    {
+        "nome": "Andreas",
+        "idade": 21,
+        "pais": "Brasil",
+        "estado": "SP",
+        "profissoes": [
+            {
+                "id": 2,
+                "Prof1": "Desenvolvedor",
+                "Prof2": "Analista de Sistemas"
+            }
+        ]
+    },
+    {
+        "nome": "Maria",
+        "idade": 30,
+        "pais": "Brasil",
+        "estado": "SP",
+        "profissoes": [
+            {
+                "id": 3,
+                "Prof1": "Professor",
+                "Prof2": "Geografo"
+            }
+        ]
+    }
+]
